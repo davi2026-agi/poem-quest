@@ -1,0 +1,25 @@
+<view class="page">
+  <view class="res">
+    <view class="rtag">本 局 成 绩</view>
+    <view class="rtitle">{{title}}</view>
+    <view class="rsub">{{comment}}</view>
+
+    <view class="rscore">{{score}}<text class="u">分</text></view>
+
+    <view class="rstat">
+      <view class="cell">
+        <view class="num">{{correct}} / {{total}}</view>
+        <view class="lab">答对题数</view>
+      </view>
+      <view class="cell">
+        <view class="num">{{combo}}</view>
+        <view class="lab">最高连对</view>
+      </view>
+    </view>
+
+    <view class="newbest" wx:if="{{isNew}}">新 纪 录</view>
+
+    <button class="btn-main" bindtap="again">再 来 一 局</button>
+    <button class="btn-ghost" open-type="share">晒 出 成 绩 · 邀 请 好 友</button>
+  </view>
+</view>

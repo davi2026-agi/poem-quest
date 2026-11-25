@@ -1,0 +1,14 @@
+{
+  "desc": "诗词闯关小程序",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.5.5",
+  "appid": "touristappid",
+  "projectname": "poem-quest",
+  "condition": {}
+}

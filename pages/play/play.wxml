@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="topbar">
+    <view class="qno">第 {{idx + 1}} / {{total}} 题</view>
+    <view class="scorebox">{{score}}<text class="unit">分</text></view>
+    <view class="combo {{combo > 1 ? 'on' : ''}}">连对 {{combo}}</view>
+  </view>
+
+  <view class="pbar">
+    <view class="pfill" style="width: {{idx / total * 100}}%"></view>
+  </view>
+  <view class="tbar">
+    <view class="tfill {{timeLeft <= 3 ? 'warn' : ''}}" style="width: {{timePct}}%"></view>
+  </view>
+
+  <view class="stage" wx:if="{{cur}}">
+    <view class="hint">{{cur.hint}}</view>
+    <view class="line">
+      <text>{{cur.pre}}</text>
+      <view class="blank {{answered ? (lastCorrect ? 'ok' : 'no') : ''}}">{{answered ? cur.a : ''}}</view>
+      <text>{{cur.post}}</text>
+    </view>
+    <view class="tip" wx:if="{{!answered}}">选出恰当的一句，补全这首诗</view>
+  </view>
+
+  <view class="opts">
+    <view
+      class="opt {{item.state}}"
+      wx:for="{{opts}}"
+      wx:key="t"
+      data-i="{{index}}"
+      bindtap="choose"
+    >
+      <text class="ol" wx:if="{{item.state === 'ok'}}">✓</text>
+      <text class="ol" wx:if="{{item.state === 'no'}}">✕</text>
+      <text class="ot">{{item.t}}</text>
+    </view>
+  </view>
+
+  <view class="note {{answered ? 'show' : ''}}" wx:if="{{cur}}">
+    <view class="nsrc">{{cur.s}}</view>
+    <view class="nfull">{{cur.f}}</view>
+  </view>
+</view>

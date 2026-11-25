@@ -1,0 +1,29 @@
+<view class="page">
+  <view class="hero">
+    <view class="kicker">唐 诗 宋 词 · 补 全 挑 战</view>
+    <view class="title">诗词闯关</view>
+    <view class="sub">十五句名篇，看你能接上几句</view>
+  </view>
+
+  <view class="stat">
+    <view class="cell">
+      <view class="num">{{best || 0}}</view>
+      <view class="lab">最高分</view>
+    </view>
+    <view class="cell">
+      <view class="num">{{bestTitle || '未上榜'}}</view>
+      <view class="lab">最佳称号</view>
+    </view>
+  </view>
+
+  <button class="btn-main" bindtap="start">开 始 闯 关</button>
+  <button class="btn-ghost" open-type="share">邀 请 好 友 来 战</button>
+
+  <view class="rules">
+    <view class="rt">规 则</view>
+    <view class="ri">一、每局 <text>15</text> 句诗词，每句挖去一处。</view>
+    <view class="ri">二、每题限时 <text>12</text> 秒，越快答对得分越高。</view>
+    <view class="ri">三、连续答对有连击加分，答错或超时则中断。</view>
+    <view class="ri">四、题目全部出自唐诗宋词及古文公版名篇。</view>
+  </view>
+</view>

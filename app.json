@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/play/play",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarTitleText": "诗词闯关",
+    "navigationBarBackgroundColor": "#8a2f23",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fbf9f4",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
